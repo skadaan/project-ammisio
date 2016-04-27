@@ -1,6 +1,6 @@
-class CreateProjects < ActiveRecord::Migration
+class CreateSpaces < ActiveRecord::Migration
   def change
-    create_table :projects do |t|
+    create_table :spaces do |t|
       t.string :title
       t.string :details
       t.date :expected_completion_date

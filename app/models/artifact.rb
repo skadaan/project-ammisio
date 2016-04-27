@@ -2,7 +2,7 @@ class Artifact < ActiveRecord::Base
   
   before_save :upload_to_s3
   attr_accessor :upload
-  belongs_to :project
+  belongs_to :space
   
   MAX_FILESIZE = 10.megabytes
   validates_presence_of :name, :upload

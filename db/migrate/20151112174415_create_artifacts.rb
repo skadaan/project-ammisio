@@ -3,7 +3,7 @@ class CreateArtifacts < ActiveRecord::Migration
     create_table :artifacts do |t|
       t.string :name
       t.string :key
-      t.belongs_to :project, index: true, foreign_key: true
+      t.belongs_to :space, index: true, foreign_key: true
 
       t.timestamps null: false
     end

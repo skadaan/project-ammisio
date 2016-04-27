@@ -6,9 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SaasProjectApp
+module SaasSpaceApp
   class Application < Rails::Application
-     
+    config.web_console.whitelisted_ips = false
+
     # uncomment to ensure a common layout for devise forms
     #   config.to_prepare do   # Devise
     #     Devise::SessionsController.layout "sign"

@@ -1,13 +1,13 @@
-<%= form_for @user_project, :html => { :class => "form-horizontal user_project" } do |f| %>
+<%= form_for @user_space, :html => { :class => "form-horizontal user_space" } do |f| %>
 
-    <% if @user_project.errors.any? %>
+    <% if @user_space.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@user_project.errors.count, "error") %> prohibited this user_project from being saved:</h3>
+        <h3 class="panel-title"><%= pluralize(@user_space.errors.count, "error") %> prohibited this user_space from being saved:</h3>
       </div>
       <div class="panel-body">
         <ul>
-        <% @user_project.errors.full_messages.each do |msg| %>
+        <% @user_space.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>
@@ -16,23 +16,23 @@
   <% end %>
 
   <div class="control-group">
-    <%= f.label :project_id, :class => 'control-label' %>
+    <%= f.label :space_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :project_id, :class => 'form-control' %>
+      <%= f.text_field :space_id, :class => 'form-control' %>
     </div>
-    <%= error_span(@user_project[:project_id]) %>
+    <%= error_span(@user_space[:space_id]) %>
   </div>
   <div class="control-group">
     <%= f.label :user_id, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :user_id, :class => 'form-control' %>
     </div>
-    <%= error_span(@user_project[:user_id]) %>
+    <%= error_span(@user_space[:user_id]) %>
   </div>
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            user_projects_path, :class => 'btn btn-default' %>
+            user_spaces_path, :class => 'btn btn-default' %>
 
 <% end %>

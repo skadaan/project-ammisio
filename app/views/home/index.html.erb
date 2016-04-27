@@ -1,11 +1,11 @@
 <% if current_user %>
 <h3 class="pull-right">Organization: <%= @tenant.name %></h3>
-<%= render 'projects/list' %>
+<%= render 'spaces/list' %>
 <% else %>
 <div class="jumbotron">
-  <h2>Welcome to the Project Management Application!</h2>
+  <h2>Welcome to the Space Management Application!</h2>
   <p class="lead">
-    You'll love managing your project with our SaaS application. Please take a look at our great plans
+    You'll love managing your space with our SaaS application. Please take a look at our great plans
   </p>
 </div>
 <div class="row">
@@ -20,7 +20,7 @@
           <li>Unlimited file uploads</li>
           <li>Responsive design</li>
           <li>Access anywhere</li>
-          <li>1 project</li>
+          <li>1 space</li>
         </ul>
       </div>
       <p>
@@ -37,7 +37,7 @@
           <li>Unlimited file uploads</li>
           <li>Responsive design</li>
           <li>Access anywhere</li>
-          <li class='extra'>Unlimited projects</li>
+          <li class='extra'>Unlimited spaces</li>
         </ul>
       </div>
       <p>

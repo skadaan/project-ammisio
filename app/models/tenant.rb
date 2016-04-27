@@ -2,12 +2,12 @@ class Tenant < ActiveRecord::Base
   
   acts_as_universal_and_determines_tenant
   has_many :members, dependent: :destroy
-  has_many :projects, dependent: :destroy
+  has_many :spaces, dependent: :destroy
   has_one :payment
   accepts_nested_attributes_for :payment
   
-  def can_create_projects?
-    (plan == 'free' && projects.count < 1) || (plan == 'premium')  
+  def can_create_spaces?
+    (plan == 'free' && spaces.count < 1) || (plan == 'premium')  
   end
   
   validates_uniqueness_of :name

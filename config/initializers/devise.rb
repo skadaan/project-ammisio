@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '3f1e395029378c21d7e776320e60c111109b7879347535a9a1ad22df168ce70ce2d1a42d31a9084c7646d043257911cedd9523a1081962f1c0dde31dc2dd4a73'
+  # config.secret_key = 'd0995c6a0126f3bc68dae5667e79579b85816ad0526daff9b6eeb7411655e72428f80e9b4f3da70a3ef50e76964aba9e680bd0688ea24397eb5e3eb651007052'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'do-not-reply@example.com'
+  config.mailer_sender = 'salehq1989@gmail.com'
 
   # Configure the class responsible to send e-mails.
   config.mailer = 'Devise::Mailer'
@@ -99,7 +99,10 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '73154057171e0d6f9db50624ae84538e17f6fe42c41d7b624eaa0e1dae9d4947d5659b11a15bf45d883f3559b3fd59865b6b4f1853a597b6be7acd64dd68eb1b'
+  # config.pepper = 'd758db0d23598b9e2cc78ce62b6e416088046a2a265577bed68a47b927b598a7b87012732933f7a6dc2578223bc53a5e60fd5299cc70a02ff9b94b4f0f45a2b0'
+
+  # Send a notification email when the user's password is changed
+  # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -124,7 +127,7 @@ Devise.setup do |config|
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
-  config.confirmation_keys = [:email]
+  # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
@@ -161,7 +164,7 @@ Devise.setup do |config|
   # config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
-  # config.unlock_keys = [:email]
+  config.unlock_keys = [:email]
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email

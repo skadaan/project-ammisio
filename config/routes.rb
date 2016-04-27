@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :user_projects
+  resources :user_spaces
   resources :artifacts
   resources :tenants do
-    resources :projects do
+    resources :spaces do
       get 'users', on: :member 
       put 'add_user', on: :member 
     end
